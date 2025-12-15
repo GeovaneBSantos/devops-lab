@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>DevOps Lab – Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="logo">
+      <span class="logo-dot"></span>
+      <span>DevOps Lab</span>
+    </div>
+    <div class="top-bar-right">
+      <span class="env-badge">Ambiente: Dev</span>
+      <span class="status-indicator status-ok">Cluster OK</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Dashboard de Serviços DevOps</h1>
+        <p>
+          Acompanhe o status dos serviços monitorados e visualize
+          healthchecks em tempo real.
+        </p>
+        <button id="btn-refresh" class="btn-primary">Atualizar</button>
+      </div>
+      <div class="hero-image">
+        <img src="./assets/img/devops-hero.jpg" alt="DevOps e tecnologia" />
+      </div>
+    </section>
+
+    <section class="cards-section">
+      <h2>Serviços monitorados</h2>
+      <p class="section-subtitle">Dados obtidos do backend via API</p>
+      <div id="services-grid" class="cards-grid"></div>
+    </section>
+
+    <section class="log-section">
+      <h2>Logs recentes</h2>
+      <ul id="log-list" class="log-list"></ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>DevOps Lab • Ambiente Dockerizado</span>
+  </footer>
+
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>
