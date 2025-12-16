@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  backend:
+    image: devops-lab-backend
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+    networks:
+      - devops-net
+
+  frontend:
+    image: devops-lab-frontend
+    ports:
+      - "8080:8080"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    networks:
+      - devops-net
+
+networks:
+  devops-net:
+    driver: overlay
